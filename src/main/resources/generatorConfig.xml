@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="E:\maven_jars\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
+  <!-- 序列化model -->
+  <!-- <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin> -->
+  
+  <context id="context1">
+  	<commentGenerator>
+      <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+      <property name="suppressAllComments" value="false"/>
+    </commentGenerator>
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/jplee_adminlte?serverTimezone=UTC" userId="root" password="root" />
+    <javaModelGenerator targetPackage="com.jplee.springmvc.model" targetProject="demo-springmvc" />
+    <sqlMapGenerator targetPackage="com.jplee.springmvc.mapper" targetProject="demo-springmvc/src/main/resources" />
+    <javaClientGenerator targetPackage="com.jplee.springmvc.mapper" targetProject="demo-springmvc" type="XMLMAPPER" />
+  	<table tableName="rc_user" enableCountByExample="false" enableUpdateByExample="false"
+        enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+  </context>
+</generatorConfiguration> 
